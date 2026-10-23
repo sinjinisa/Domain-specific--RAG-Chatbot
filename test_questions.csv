@@ -1,0 +1,16 @@
+id,question,expected_answer,expected_source
+1,What principle does a stack follow?,LIFO,DSA_Fundamentals.pdf
+2,Which operation inserts into a stack?,Push,DSA_Fundamentals.pdf
+3,Which operation removes from a stack?,Pop,DSA_Fundamentals.pdf
+4,What principle does a queue follow?,FIFO,DSA_Fundamentals.pdf
+5,What is enqueue?,Insert at rear,DSA_Fundamentals.pdf
+6,What is dequeue?,Remove from front,DSA_Fundamentals.pdf
+7,How are array elements stored?,Contiguous memory,DSA_Fundamentals.pdf
+8,What does a linked list node contain?,Data and link,DSA_Fundamentals.pdf
+9,What is linear search complexity?,O(n),Algorithm_Analysis.pdf
+10,What does binary search require?,Sorted data,Algorithm_Analysis.pdf
+11,What is binary search complexity?,O(log n),Algorithm_Analysis.pdf
+12,What is bubble sort worst case?,O(n^2),Algorithm_Analysis.pdf
+13,What is merge sort worst case?,O(n log n),Algorithm_Analysis.pdf
+14,Who is the institution CEO?,Not available,None
+15,What is the 2030 placement rate?,Not available,None
