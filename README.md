@@ -1,95 +1,89 @@
-# Domain-Specific RAG Chatbot
+# Domain-Specific RAG Chatbot for PDF Question Answering
 
-An AI-powered PDF question-answering application
-built using Python, Streamlit, FAISS,
-Sentence Transformers and Groq.
+An AI-powered chatbot that enables users to upload PDF documents and ask natural-language questions using Retrieval-Augmented Generation (RAG).
 
-## Project Objective
+## Live Application
 
-Develop a chatbot that retrieves information
-from uploaded PDF documents and answers
-questions using the retrieved context.
+[Open the Deployed Chatbot](PASTE_STREAMLIT_URL_HERE)
+
+## Project Overview
+
+The application extracts information from PDF documents, generates semantic embeddings, retrieves relevant passages using FAISS, and produces answers through a Groq-hosted language model.
+
+Retrieved document names and page numbers are displayed to support answer verification.
 
 ## Features
 
-- Upload multiple PDF documents
-- Extract PDF text with page metadata
-- Divide documents into overlapping chunks
-- Generate semantic embeddings
-- Store embeddings in FAISS
-- Retrieve relevant passages
-- Generate grounded answers using Groq
-- Display source documents and page numbers
-- Maintain chat history
-- Clear chat and uploaded documents
-- Handle unavailable information
+- Multiple PDF uploads
+- Text extraction with page metadata
+- Overlapping document chunking
+- Transformer-based embeddings
+- FAISS vector similarity search
+- Context-grounded question answering
+- Document and page references
+- Fallback for unavailable information
+- Interactive Streamlit chat interface
+- Chat clearing and document replacement
 
-## Technology Stack
+## Tech Stack
 
-- Python
-- Streamlit
-- pypdf
-- LangChain Text Splitters
-- Sentence Transformers
-- FAISS
-- Groq API
+Python, Streamlit, pypdf, LangChain Text Splitters, Sentence Transformers, FAISS, Groq API, and GitHub.
 
-## RAG Workflow
+## Architecture
 
-1. Upload PDF documents.
-2. Extract text from each page.
-3. Split text into chunks.
-4. Generate text embeddings.
-5. Store vectors using FAISS.
-6. Accept a user question.
-7. Retrieve the most relevant chunks.
-8. Generate an answer from those chunks.
-9. Display the answer and source references.
+PDF Upload → Text Extraction → Chunking → Embeddings → FAISS → Context Retrieval → Groq LLM → Answer with Sources.
 
-## Local Installation
+For the complete architecture, see [architecture.md](architecture.md).
 
-Install the libraries:
+## Installation
 
-    pip install -r requirements.txt
+Install dependencies using:
 
-Create a local .env file containing GROQ_API_KEY.
+`pip install -r requirements.txt`
 
-Start the application:
+Create a local `.env` file containing your Groq API key:
 
-    streamlit run app.py
+`GROQ_API_KEY=your_private_key`
 
-## Deployment
+Start the application using:
 
-Deploy using Streamlit Community Cloud.
+`streamlit run app.py`
 
-Repository branch: main
+Never commit your `.env` file or private API key.
 
-Main file path: app.py
+## Testing
 
-Add GROQ_API_KEY in Streamlit Secrets.
+The application has been tested for PDF processing, answer generation, source references, missing-information fallback, and multiple-document retrieval.
+
+The 18-question evaluation and final results are provided in [test_questions.csv](test_questions.csv).
+
+## Documentation
+
+[Project Report](PROJECT_REPORT.md)
+
+[Architecture Diagram](architecture.md)
+
+[Demonstration Script](DEMO_SCRIPT.md)
+
+## Screenshots
+
+Application screenshots are available in the `screenshots` folder.
+
+## Demonstration Video
+
+[Watch Project Demonstration](PASTE_VIDEO_URL_HERE)
 
 ## Limitations
 
-- Text-based PDFs are supported.
-- Scanned PDFs require an OCR extension.
-- Answers can contain mistakes.
-- Similarity scores are not proof of correctness.
-- Uploaded documents should not be confidential.
-- Documents and chat history are session-based.
+Scanned documents require OCR support. AI-generated answers may be incorrect, and retrieved passages should be verified against the original documents.
 
-## Future Improvements
+## Future Scope
 
-- OCR for scanned PDFs
-- Document filters
-- FastAPI backend
-- User authentication
-- Persistent vector storage
-- Automated evaluation
-- Conversation-aware retrieval
+OCR integration, multilingual question answering, persistent vector storage, conversation-aware retrieval, document filtering, and automated evaluation.
 
-## Academic Project
+## Project Information
 
-AI Major Project 3
-
-Domain-Specific RAG Chatbot for PDF
-Question Answering
+**Project Title:** Domain-Specific RAG Chatbot for PDF Question Answering  
+**Category:** AI / NLP / Generative AI  
+**Submission:** AI Major Project 3  
+**Student:** [Your name]
